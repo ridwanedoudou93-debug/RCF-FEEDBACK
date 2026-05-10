@@ -141,7 +141,9 @@ function App() {
     }
   }
 
-  const getQuestionById = (id) => allQuestions.find(q => q.id === id)
+  const getQuestionById = (id) => {
+    return allQuestions.find(q => q.id === id)
+  }
 
   if (submitted) {
     return (
@@ -181,10 +183,10 @@ function App() {
             </div>
             <h1 className="text-xl sm:text-2xl sm:text-3xl sm:text-4xl font-black text-white mb-2 sm:mb-3 tracking-tight">استبيان رأي</h1>
             <p className="text-slate-300 text-xs sm:text-sm font-medium mb-2 sm:mb-3 px-4 sm:px-0 leading-relaxed">
-              يهدف هذا الاستبيان إلى التعرف على آرائكم وانطباعاتكم حول تجربتكم معنا خلال المعرض، وذلك لمساعدتنا على تطوير خدماتنا وتحسين جودة تواصلنا وتقديم تجربة أفضل لكم مستقبلًا.
+              يهدف هذا الاستبيان إلى التعرف على آرائكم وانطباعاتكم حول تجربتكم معنا خلال المعرض، وذلك لمساعدتنا على تطوير خدماتنا وتحسين جودة تواصلنا وتقديم تجربة أفضل لكم مستقبلًا. 
             </p>
             <p className="text-green-300 text-xs sm:text-sm font-semibold bg-green-900/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl inline-block mb-4 sm:mb-6">
-             الاستبيان لا يطلب أي معلومات شخصية
+              🔒 الاستبيان لا يطلب أي معلومات شخصية
             </p>
             
             <div className="w-full max-w-sm mx-auto">
@@ -214,17 +216,17 @@ function App() {
                   return (
                     <div key={qId} className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 sm:p-7 shadow-sm hover:shadow-md transition-shadow">
                       <h3 className="text-base sm:text-lg sm:text-xl font-bold text-slate-900 mb-3 sm:mb-4 sm:mb-5 flex items-center">
-                        <span className="w-9 h-9 sm:w-10 sm:w-12 h-12 bg-gradient-to-br from-[#f47e1b] to-orange-500 text-white rounded-lg sm:rounded-xl sm:rounded-2xl flex items-center justify-center ml-3 sm:ml-4 font-black text-sm sm:text-base sm:text-xl shadow-md">
-                          11
+                        <span className="w-9 h-9 sm:w-10 sm:h-12 bg-gradient-to-br from-[#f47e1b] to-orange-500 text-white rounded-lg sm:rounded-xl flex items-center justify-center ml-3 sm:ml-4 font-black text-sm sm:text-base sm:text-xl shadow-md">
+                          10
                         </span>
-                        <span className="text-sm sm:text-base sm:text-lg">{q.text}</span>
+                        <span className="text-sm sm:text-base sm:text-lg">هل لديك اقتراحات أو ملاحظات تساعدنا على التطور؟</span>
                       </h3>
                       <textarea
                         name="q11"
                         value={formData.q11}
                         onChange={handleChange}
                         rows="4"
-                        className="w-full p-3 sm:p-4 sm:p-5 border-2 border-slate-200 rounded-lg sm:rounded-xl focus:border-[#35a3fc] focus:outline-none resize-none text-sm sm:text-base sm:text-lg font-medium transition-all"
+                        className="w-full p-3 sm:p-4 sm:p-5 border-3 border-slate-200 rounded-lg sm:rounded-xl focus:border-[#35a3fc] focus:outline-none resize-none text-sm sm:text-base sm:text-lg font-medium transition-all"
                         placeholder="اكتب اقتراحاتك هنا..."
                       ></textarea>
                     </div>
@@ -232,12 +234,14 @@ function App() {
                 }
 
                 const q = getQuestionById(qId)
+                if (!q) return null
+                
                 const qNumber = allQuestions.findIndex(x => x.id === qId) + 1
                 
                 return (
                   <div key={qId} className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 sm:p-7 shadow-sm hover:shadow-md transition-shadow">
                     <h3 className="text-base sm:text-lg sm:text-xl font-bold text-slate-900 mb-3 sm:mb-4 sm:mb-5 flex items-center">
-                      <span className="w-9 h-9 sm:w-10 sm:w-12 h-12 bg-gradient-to-br from-[#f47e1b] to-orange-500 text-white rounded-lg sm:rounded-xl sm:rounded-2xl flex items-center justify-center ml-3 sm:ml-4 font-black text-sm sm:text-base sm:text-xl shadow-md">
+                      <span className="w-9 h-9 sm:w-10 sm:h-12 bg-gradient-to-br from-[#f47e1b] to-orange-500 text-white rounded-lg sm:rounded-xl flex items-center justify-center ml-3 sm:ml-4 font-black text-sm sm:text-base sm:text-xl shadow-md">
                         {qNumber}
                       </span>
                       <span className="text-sm sm:text-base sm:text-lg">{q.text}</span>
@@ -246,7 +250,7 @@ function App() {
                       {q.options.map((option) => (
                         <label 
                           key={option} 
-                          className={`flex items-center p-3 sm:p-4 sm:p-5 rounded-lg sm:rounded-xl border-2 cursor-pointer transition-all transform hover:scale-[1.02] ${
+                          className={`flex items-center p-3 sm:p-4 sm:p-5 rounded-lg sm:rounded-xl border-3 cursor-pointer transition-all transform hover:scale-[1.02] ${
                             formData[qId] === option 
                               ? 'border-[#f47e1b] bg-gradient-to-r from-orange-50 to-orange-100 shadow-md' 
                               : 'border-slate-200 bg-white hover:border-[#35a3fc] hover:bg-blue-50'
