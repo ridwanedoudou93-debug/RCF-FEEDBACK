@@ -180,7 +180,10 @@ function App() {
               <img src="/logo-rcf.png" alt="RCF Logo" className="h-24 object-contain" />
             </div>
             <h1 className="text-3xl sm:text-4xl font-black text-white mb-3 tracking-tight">استبيان رأي</h1>
-            <p className="text-slate-300 text-lg font-medium mb-6">نقدر ملاحظاتك ونرحب بآرائك</p>
+            <p className="text-slate-300 text-lg font-medium mb-2">نقدر ملاحظاتك ونرحب بآرائك</p>
+            <p className="text-green-300 text-base font-semibold bg-green-900/30 px-4 py-2 rounded-xl inline-block mb-6">
+              🔒 الاستبيان لا يطلب أي معلومات شخصية
+            </p>
             
             <div className="w-full max-w-md mx-auto">
               <div className="flex justify-between mb-2 text-sm">
@@ -308,7 +311,7 @@ function App() {
         </div>
 
         <div className="text-center mt-10 text-slate-500">
-          <p className="font-semibold text-base">© 2024 RCF. جميع الحقوق محفوظة.</p>
+          <p className="font-semibold text-base">© 2026 RCF. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </div>
