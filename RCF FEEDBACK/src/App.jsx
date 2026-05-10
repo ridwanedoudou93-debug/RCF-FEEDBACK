@@ -21,7 +21,6 @@ function App() {
   const [error, setError] = useState('')
 
   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbYX7cMvZMA8Ju8ZO3zxoQQ8YhXVRWbCS-rnq9WP-zmqkftMI4tQwJNqtL37oDazQYaw/exec'
-
   const steps = [
     {
       questions: ['q1', 'q2', 'q3']
