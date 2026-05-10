@@ -181,10 +181,10 @@ function App() {
             </div>
             <h1 className="text-xl sm:text-2xl sm:text-3xl sm:text-4xl font-black text-white mb-2 sm:mb-3 tracking-tight">استبيان رأي</h1>
             <p className="text-slate-300 text-xs sm:text-sm font-medium mb-2 sm:mb-3 px-4 sm:px-0 leading-relaxed">
-              يهدف هذا الاستبيان إلى التعرف على آرائكم وانطباعاتكم حول تجربتكم معنا خلال المعرض، وذلك لمساعدتنا على تطوير خدماتنا وتحسين جودة تواصلنا وتقديم تجربة أفضل لكم مستقبلًا. نشكركم على وقتكم ومساهمتكم القيمة.
+              يهدف هذا الاستبيان إلى التعرف على آرائكم وانطباعاتكم حول تجربتكم معنا خلال المعرض، وذلك لمساعدتنا على تطوير خدماتنا وتحسين جودة تواصلنا وتقديم تجربة أفضل لكم مستقبلًا.
             </p>
             <p className="text-green-300 text-xs sm:text-sm font-semibold bg-green-900/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl inline-block mb-4 sm:mb-6">
-              🔒 الاستبيان لا يطلب أي معلومات شخصية
+             الاستبيان لا يطلب أي معلومات شخصية
             </p>
             
             <div className="w-full max-w-sm mx-auto">
@@ -313,7 +313,7 @@ function App() {
         </div>
 
         <div className="text-center mt-6 sm:mt-8 sm:mt-10 text-slate-500">
-          <p className="font-semibold text-xs sm:text-sm sm:text-base">© 2024 RCF. جميع الحقوق محفوظة.</p>
+          <p className="font-semibold text-xs sm:text-sm sm:text-base">© 2026 RCF. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </div>
