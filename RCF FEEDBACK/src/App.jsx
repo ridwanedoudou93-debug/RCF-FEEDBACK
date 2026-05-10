@@ -180,7 +180,9 @@ function App() {
               <img src="/logo-rcf.png" alt="RCF Logo" className="h-16 sm:h-20 sm:h-24 object-contain" />
             </div>
             <h1 className="text-xl sm:text-2xl sm:text-3xl sm:text-4xl font-black text-white mb-2 sm:mb-3 tracking-tight">استبيان رأي</h1>
-            <p className="text-slate-300 text-sm sm:text-base sm:text-lg font-medium mb-1 sm:mb-2">نقدر ملاحظاتك ونرحب بآرائك</p>
+            <p className="text-slate-300 text-xs sm:text-sm font-medium mb-2 sm:mb-3 px-4 sm:px-0 leading-relaxed">
+              يهدف هذا الاستبيان إلى التعرف على آرائكم وانطباعاتكم حول تجربتكم معنا خلال المعرض، وذلك لمساعدتنا على تطوير خدماتنا وتحسين جودة تواصلنا وتقديم تجربة أفضل لكم مستقبلًا. نشكركم على وقتكم ومساهمتكم القيمة.
+            </p>
             <p className="text-green-300 text-xs sm:text-sm font-semibold bg-green-900/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl inline-block mb-4 sm:mb-6">
               🔒 الاستبيان لا يطلب أي معلومات شخصية
             </p>
